@@ -22,15 +22,15 @@ CampusCare AI adalah platform pendamping mahasiswa berbasis AI yang menggabungka
 
 ## Arsitektur Sistem (Blueprint)
 Proyek ini menggunakan 3 flow utama di Langflow:
-1. Flow 0 - Intent Router: `Chat Input` → `Prompt Template` → `Gemini.ai` → `Label Router (Custom Component by IBM Bob)` → `If-Else`.
-2. Flow 1 - Academic Assistant: `Chat Input` → `Astra DB (RAG)` → `Prompt Template` → `watsonx.ai` → `Chat Output`.
-3. Flow 2 - Emotional Support: `Chat Input` → `Prompt Template (Empathy)` → `watsonx.ai` → `Parser (Emotion Tag)` → `Chat Output`.
+1. Flow 0 - Intent Router: Chat Input → Prompt Template → Gemini.ai → Label Router (Custom Component by IBM Bob) → If-Else.
+2. Flow 1 - Academic Assistant: Chat Input → Astra DB (RAG) → Prompt Template → gemini.ai → Chat Output.
+3. Flow 2 - Emotional Support: Chat Input → Prompt Template (Empathy) → gemini.ai → Parser (Emotion Tag) → Chat Output.
 
-*(Lihat folder `docs/` untuk diagram arsitektur dan screenshot Langflow)*
+*(Lihat folder docs/ untuk diagram arsitektur dan screenshot Langflow)*
 
 ##  Cara Menjalankan (Local Setup)
 1. Clone repositori ini.
-2. Import file `.json` dari folder `langflow_flows/` ke dalam Langflow Desktop/Web.
+2. Import file .json dari folder langflow_flows/ ke dalam Langflow Desktop/Web.
 3. Masukkan kredensial API Key (IBM Cloud, Astra DB, Gemini untuk fallback) di pengaturan komponen.
 4. Jalankan Playground di Langflow untuk menguji flow.
 
